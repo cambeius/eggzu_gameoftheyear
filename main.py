@@ -15,13 +15,13 @@ while running:
 
     screen.fill("blue")
 
-    ##pygame.draw.circle(screen, "red", player_pos, 40)
     avatar = pygame.image.load("eggzu.png")
+    def avatarRender():
+        screen.blit(avatar,player_pos)
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:
         player_pos.y -= 300 * dt
-        ##avatar.y -= 300 * dt
     if keys[pygame.K_s]:
         player_pos.y += 300 * dt
     if keys[pygame.K_a]:
